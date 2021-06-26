@@ -1,17 +1,28 @@
 body{
     background-color: #eee;
+    margin: 0;
     
 }
 
 #navbar{
     top:0;
     position: fixed;
-    height: 75px;
+    height: 15vh;
+    width: 100%;
+    background-color: #ddd;
+    z-index: 1;
+    
 }
 
 ul{
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
-    
+    padding: 10px;
+}
+
+li{
+    padding-right: 20px;
 }
 
 a{
@@ -20,5 +31,66 @@ a{
 }
 
 #welcome-section{
-    margin-top:75px;
+    margin-top: 15vh;
+    height: 85vh;
+    text-align: center;
+}
+
+.Bienvenida{
+    position: relative;
+    top:25vh;
+}
+
+#projects{
+    background-color: #ddd;
+}
+
+section#projects{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+"titulo titulo"
+"proyecto1 proyecto2"
+"proyecto3 proyecto4";
+justify-items: center;
+align-items:center;
+}
+
+h1.titulo-general-proyectos{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.div-titulo-proyectos{
+    grid-area: titulo;
+}
+
+.proyecto1{
+    grid-area:proyecto1 ;
+    background-color: #ccc;
+}
+
+.proyecto2{
+    grid-area: proyecto2;
+}
+
+.proyecto3{
+    grid-area: proyecto3;
+}
+
+.proyecto4{
+    grid-area: proyecto4;
+}
+
+.project-tile{
+    text-align: center;
+}
+
+#proyectoimg{
+    display: block;
+    width: 90%;
+    height: 15rem;
+    margin: auto;
+    padding-top: 30px;
 }
