@@ -114,7 +114,7 @@ h1.titulo-general-proyectos{
     height: 15rem;
     margin: auto;
     margin-top: 35px;
-    box-shadow: 2.5px 0 rgba(0,0,0,0.19); 
+    box-shadow: 2px 0 1px rgba(0,0,0,0.19); 
 }
 
 .project-title-shadow{
@@ -122,7 +122,8 @@ h1.titulo-general-proyectos{
     margin: 0 5%;
     padding: 1px 0 ;
     color:white;
-    box-shadow: 2.5px 2.5px rgba(0,0,0,0.19);  
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.19);  
 }
 
 #Contáctame{
