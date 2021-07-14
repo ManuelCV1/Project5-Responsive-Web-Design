@@ -22,14 +22,15 @@ body{
 }
 
 ul{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: flex-end;
-    list-style: none;
-    padding: 10px;
+    list-style: none;   
 }
 
-li{
-    padding-right: 20px;
+li {
+    padding: 5.9vh 10px 4.9vh 10px;
 }
 
 a{
@@ -37,9 +38,15 @@ a{
     color: inherit;
 }
 
+ ul :hover{
+    
+    background-color: #000000;
+    color: white;
+}
+
 #welcome-section{
     margin-top: 15vh;
-    height: 85vh;
+    height: 100vh;
     text-align: center;
     background-color:#000000;
     color: white;
@@ -54,6 +61,7 @@ a{
 #subtitulo{
     font-style: italic;
     font-size: 1.8rem;
+   
 }
 
 #projects{
@@ -64,11 +72,13 @@ a{
 section#projects{
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    
     grid-template-areas:
 "titulo titulo"
 "proyecto1 proyecto2"
 "proyecto3 proyecto4";
+grid-template-columns: 50% 50%;
+
 justify-items: center;
 align-items:center;
 padding-bottom: 70px;
@@ -80,6 +90,8 @@ h1.titulo-general-proyectos{
     margin-bottom: 0;
     text-align: center;
     font-size: 1.9rem;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.3);
+
    
    
 }
@@ -127,20 +139,46 @@ h1.titulo-general-proyectos{
 }
 
 #Contáctame{
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
     background-color: #000000;
     color: white;
+    
+}
+
+h1#Hagamos{
+    font-size: 1.9rem;
+
 }
 
 .enlaces-contacto{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 0 15px;
+    padding: 10px 15px;
+    text-shadow: 2px 2px 1px rgba(255,255,255,.1);
 }
 
-p#enlaces{
-    padding: 0 15px;
+.enlace-img{
+    display: flex;
+    padding: 1px;
+}
+
+.img-logos{
+    width: 30px;
+    height: 27px;
+    display: block;
+    padding-top: 9px;
+}
+
+#wasaplogo{
+    width: 27.64px;
+    height: 28.36px;
+}
+
+p.enlaces{
+   padding: 0 50px 0 5px;
+    
 }
 
 #linea{
@@ -155,33 +193,35 @@ footer{
     color: white;
 }
 
-p#enlaces :hover{ 
+.img-logos:hover{
+    -moz-transition: .3s;
+    -webkit-transition:.3s;
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    transition-duration: .3s;
+    transform:rotate(1turn);
+}
 
-    position: relative;
-    animation-name:enlaces;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+@media (max-width: 600px){
+    section#projects{
+    grid-template-columns:100%;
+    grid-template-areas:
+"titulo"
+"proyecto1" "proyecto2"
+"proyecto3" "proyecto4";
+    }
+
+    ul{
+        justify-content: center;
+    }
+
 
 }
 
-@keyframes enlaces{
-    
-    0%{
-        top:0;
-        
-    }
-
-    50%{
-        top:5px;
-        color: blue;
-    }
-
-    100%{
-        color: black;
-        top:0px;
-        
-        
-        
+@media (max-width: 680px){
+    footer{
+        text-align: center;
     }
 }
+
+
