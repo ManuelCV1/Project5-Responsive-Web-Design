@@ -106,10 +106,13 @@ h1.titulo-general-proyectos{
 
 .proyecto2{
     grid-area: proyecto2;
+    width: 81.528%;
 }
 
 .proyecto3{
     grid-area: proyecto3;
+    width: 83%;
+
 }
 
 .proyecto4{
